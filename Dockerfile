@@ -4,8 +4,6 @@ FROM postgres:9.5
 ENV POSTGIS_MAJOR=2.2
 ENV POSTGIS_VERSION=2.2.2+dfsg-4.pgdg80+1
 ENV PGDATA=/var/lib/postgresql/data_docker
-ENV POSTGRES_PASSWORD=postgres
-ENV POSTGRES_user=postgres
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \

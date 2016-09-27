@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+export PGUSER="$POSTGRES_USER"
+
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "postgres" <<-EOSQL
     CREATE EXTENSION postgis;
     CREATE EXTENSION postgis_topology;
