@@ -4,7 +4,7 @@ RUN mkdir -p /docker-entrypoint-initdb.d
 COPY init_db.sh /docker-entrypoint-initdb.d/
 
 RUN mkdir -p /backup/
-COPY postgres_db.bak /backup/postgres_db.bak
+COPY restore_db.dump /backup/restore_db.dump
 
 
 # Normally docker-entrypoint.sh hangs at the end, here we pass --version as
