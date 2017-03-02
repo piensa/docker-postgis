@@ -9,3 +9,6 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "postgres" <<-EOSQL
     GRANT ALL ON geometry_columns TO PUBLIC;
     GRANT ALL ON spatial_ref_sys TO PUBLIC;
 EOSQL
+
+pg_restore 
+pg_restore -U "$POSTGRES_USER" -d "postgres"  /backup/postgres_db.bak
