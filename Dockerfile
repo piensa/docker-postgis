@@ -3,6 +3,7 @@ FROM mdillon/postgis:9.4
 RUN mkdir backup/
 
 COPY worldmap.bak /backup/worldmap.bak
+COPY users.bak /backup/users.bak
 COPY init_db.sh /docker-entrypoint-initdb.d/
 
 
